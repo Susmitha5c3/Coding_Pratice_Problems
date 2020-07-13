@@ -82,4 +82,4 @@ return count.
 ### Optimization -
 > This can be further reduced to **O(sqrt(n) * sqrt(sqrt(n)))**, by using seive for calculating primes.
 
-> Find all the perfect squares less than N (Ofcourse it is sqrt(N) ) and iterate over it to check if its prime or not 
+> Find all the perfect squares less than N (Ofcourse it is sqrt(N) ) and iterate over it to check if its prime or not using seive method in sqrt(i) time (where 'i' is the number you checking prime for and it will be less than equal to sqrt(1e9) ).
