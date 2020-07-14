@@ -83,3 +83,22 @@ return count.
 > This can be further reduced to **O(sqrt(n) * sqrt(sqrt(n)))**, by using seive for calculating primes.
 
 > Find all the perfect squares less than N (Ofcourse it is sqrt(N) ) and iterate over it to check if its prime or not using seive method in sqrt(i) time (where 'i' is the number you checking prime for and it will be less than equal to sqrt(1e9) ).
+___
+## 4. Sum of pairs of Hamming Distance
+### Problem Statement -
+> Given an array A of N non-negative integers, find the sum of hamming distances of all pairs of integers in the array.
+
+> HAMMING DISTANCE - Hamming distance between two non-negative integers is defined as the number of positions at which the corresponding bits are different.
+
+> For eg : a = 2, b = 5. Their binary representations are a = 0010, b = 0101. Here in these two, 3 bit positions are different. Hence the distance for this is 3.
+
+### Input Format - 
+* [1]
+* [2, 3, 6]
+### Output Format - 
+* 0
+* 8
+> **Explaination for second testcase** f(2, 2) + f(2, 4) + f(2, 6) + f(4, 2) + f(4, 4) + f(4, 6) + f(6, 2) + f(6, 4) + f(6, 6) = 8
+
+### PsuedoCode -
+> check math section in InterviewBit
