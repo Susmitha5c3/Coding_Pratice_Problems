@@ -122,3 +122,6 @@ ___
     * We use **0n55555555** because - 5(hex) = 5(dec) = 0101. Where all odd bits are set.
 * After getting even and odd bits we need to do right shift by 1 for even and left shift by 1 for odd.
 * Next we need to combine those two ie. **even | odd**
+
+___
+## Must and should review the problems on interviewBit. Mostly - Divide Integer, Palindromic Binary Representaton.
