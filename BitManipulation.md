@@ -20,19 +20,18 @@
 > There are times, where the pattern will not have equal number of ones according to that pattern. Let's say the vertical order of the 3rd postion can be 0,0,1,1,0,0,1. Here the complete pattern has appeared one time. But there is incomplete pattern which has one bit set. In such situations, we need do mod with the power of 2.
 ```Java
 int CountTotalBits(int n){
-    count = 0, pow = 2, i = 0
-    if n == 1 
-        return 1;
-    n = n+1
+    count = n/2, pow = 2
+    n = n+1;
     while( pow <= n ) {
         // Calculating number of patterns
         t = n / pow; 
 
         // Calculating number of  set bits
-        count += t * (Math.pow(2, i)); 
+        count += t / 2 * pow; 
 
          //Calculation for incomplete pattern
         count += (t%2 == 1) ? (n %  pow) : 0;
+        pow <<= 1;
     }
     return count;
 }
