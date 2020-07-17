@@ -22,7 +22,7 @@ ___
 
 ## 2. Check a number is prime or not. Primilty test.
 ### Pesudocode - 
-> We can loop lo 2 to n-1 and if any number between that range dives n the renture false. Or else return true. It's time complexty is O(N)
+> We can loop lo 2 to n-1 and if any number between that range divides n the renturn false. Or else return true. It's time complexty is O(N)
 
 > We can have following futher optimizations:
 
@@ -33,7 +33,7 @@ ___
     * Therefore, we are only left with **6k+1** and **6k+5**, which can effectively written as **6k+-1**.
     * But if a number **6k+-1**, is not everytime garauntee that it is a prime. Hence we need to check whether the number is divisible by **6k+-1**.
 
-```
+```Java
 boolean isPrime(int n) {
     if(n<= 1)
         return false;
