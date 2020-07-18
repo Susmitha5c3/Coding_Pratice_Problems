@@ -171,3 +171,6 @@ class PhoneDigit
 ```
 ### Time Complexity -
 > O( 4^N )
+
+### Similar Problem -
+[JAVA solution with slight difference](https://www.geeksforgeeks.org/java-arraylist-to-print-all-possible-words-from-phone-digits/?ref=rp)
