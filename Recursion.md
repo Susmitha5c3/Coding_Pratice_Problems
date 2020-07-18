@@ -107,3 +107,67 @@ ___
 ```
 ### Time Complexity -
 > O(2 ^ N)
+
+___
+
+## 5. Possible words from phone digits (Amazon, flipkart)
+### Problem statement -
+> Given a keypad as shown in diagram, and an N digit number. List all words which are possible by pressing these numbers.
+ 
+![dailpad](dailpad.png)
+### Input Format - 
+* 2
+* 3
+* 2 3 4
+* 3
+* 3 4 5
+### Output Format - 
+* adg adh adi aeg aeh aei afg afh afi bdg bdh bdi beg beh bei bfg bfh bfi cdg cdh cdi ceg ceh cei cfg cfh cfi
+* dgj dgk dgl dhj dhk dhl dij dik dil egj egk egl ehj ehk ehl eij eik eil fgj fgk fgl fhj fhk fhl fij fik fil
+
+### Psuedocode -
+```Java
+class PhoneDigit
+{
+    public static ArrayList<String> alpha = new ArrayList<>();
+    public static ArrayList<String> generateStrings(int ar[], int n, int idx, ArrayList<String> ans, String curr) {
+        if(idx == n){
+                ans.add(curr);
+            return ans;
+        }
+        for(int i = 0; i < alpha.get(ar[idx]).length(); i++) {
+            curr += alpha.get(ar[idx]).charAt(i);
+            generateStrings(ar, n, idx+1, ans, curr);
+            
+            if(curr.length() != 0){
+                curr = curr.substring(0, curr.length()-1);
+            }
+            if(ar[idx] == 0 || ar[idx] == 1) return ans;
+        }
+        return ans;
+    }
+    static ArrayList <String> possibleWords(int a[], int N)
+    {
+        // your code here  
+       
+        alpha.add(" ");
+        alpha.add(" ");
+        alpha.add("abc");
+        alpha.add("def");
+        alpha.add("ghi");
+        alpha.add("jkl");
+        alpha.add("mno");
+        alpha.add("pqrs");
+        alpha.add("tuv");
+        alpha.add("wxyz");
+        
+        String curr = "";
+        ArrayList<String> ans = new ArrayList<>();
+        int idx = 0;
+        ans = generateStrings(a, N, idx, ans, curr);
+        return ans;
+    }
+}
+```
+### Time Complexity -
+> O( 4^N )
