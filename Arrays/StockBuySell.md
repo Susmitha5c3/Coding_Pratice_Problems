@@ -15,7 +15,9 @@
 ### Psuedocode - 
 1. Navie Solution O(N^2):
 > Here we are considering two indexes **start** and **end**. And we can write a recursive function. If there is less than or equal to the one element in the range of start and end, then we dont buy any stock so we simply return 0.
+
 > Now, we are considering a pair of ar[i] and ar[j] such that ar[i] < ar[j] and i < j. i.e we are buying at ar[i] and selling it at ar[j] and make some profit. 
+
 > Once we found this pair, we can add the profit of this to the current pair and recursively call for the left of **i** and right of **j**.
 ```C++
 // Initially start = 0, end = n
