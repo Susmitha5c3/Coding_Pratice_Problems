@@ -17,7 +17,7 @@
 > Based on binary Search
 
 ```Java
-int findKey(int ar[], int key, int low, int high) {
+int firstOcc(int ar[], int key, int low, int high) {
     while(low <= high) {
         int mid = (low+high)/2;
         if(ar[mid] < key)
