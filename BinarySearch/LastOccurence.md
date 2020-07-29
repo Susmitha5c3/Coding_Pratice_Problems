@@ -39,8 +39,8 @@ ___
 ## Count Occurences of a number.
 
 ### input Format - 
-* 10 10 20 20 20 20 30
-* 10 10 10 10
+* 10 10 20 20 20, 20
+* 10 10 10 10, 10
 
 ### Output Fomat - 
 * 3
