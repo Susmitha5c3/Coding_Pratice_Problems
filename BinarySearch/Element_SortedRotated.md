@@ -18,7 +18,7 @@
 Efficient Approach (Using BS) -
 > Here, after finding the mid, we want to decide whether which half we want to ignore. And also we want to decide which half is sorted. There will be a case where both the halves are sorted. For these conditions, we need to check the mid element with any of the corner cases, whether with the ar[0] or with the ar[n-1].
 
-> After finding the sorted part, weneed to check whether our element is in between this range. If not we move to the next part.
+> After finding the sorted part, we need to check whether our element is in between this range. If not we move to the next part.
 
 ```Java
 int search(int ar[], int low, int high, int x) {
